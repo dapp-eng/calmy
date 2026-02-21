@@ -1,0 +1,246 @@
+<Signup4Screen>:
+    name: "signup4"
+    MDFloatLayout:
+        md_bg_color: 1, 1, 1, 1
+
+        MDCard:
+            size_hint: None, None
+            size: "450dp", "625dp"
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            elevation: 10
+            theme_bg_color: "Custom"
+            md_bg_color: (0.125, 0.227, 0.290, 1)
+            padding: "5dp"
+            orientation: "vertical"
+            focus_color: (0.125, 0.227, 0.290, 0)
+            unfocus_color: (0.125, 0.227, 0.290, 1)
+            
+            RelativeLayout:
+
+                MDButton:
+                    style: "filled"
+                    pos_hint: {"center_x": 0.13, "center_y": 0.96}
+                    theme_bg_color: "Custom"
+                    md_bg_color: (0.125, 0.227, 0.290, 1)
+                    size_hint_x: 1
+                    on_release:
+                        app.change_screen("signup3", "fade")
+
+                    MDButtonIcon:
+                        icon: "chevron-left"
+                        theme_icon_color: "Custom"
+                        icon_color: (1, 1, 1, 1)
+
+                    MDButtonText:
+                        text: "BACK"
+                        theme_text_color: "Custom"
+                        theme_font_size: "Custom"
+                        font_size: "18sp"
+                        text_color: (1, 1, 1, 1)
+                        theme_font_name: "Custom"
+                        font_name: "Poppins-Medium"
+
+                MDLabel:
+                    text: "- S I G N  U P -"
+                    pos_hint: {"center_x": .5, "center_y": .87}
+                    theme_text_color: "Custom"
+                    text_color: (1, 1, 1, 1)
+                    theme_font_name: "Custom"
+                    theme_font_size: "Custom"
+                    font_size: "40sp"
+                    font_name: "Poppins-Bold"
+                    halign: "center"
+
+                MDLabel:
+                    text: "Silahkan mengisi data diri Anda!"
+                    pos_hint: {"center_x": .5, "center_y": .80}
+                    theme_text_color: "Custom"
+                    text_color: (1, 1, 1, 1)
+                    theme_font_name: "Custom"
+                    theme_font_size: "Custom"
+                    font_size: "20sp"
+                    font_name: "Poppins-SemiBold"
+                    halign: "center"
+                
+                MDTextField:
+                    id: jkelamin
+                    mode: "outlined"
+                    size_hint_x: None
+                    width: "400dp"
+                    pos_hint: {"center_x": .5, "center_y": .68}
+                    theme_text_color: "Custom"
+                    text_color_normal: (1, 1, 1, 1)
+                    text_color_focus: (1, 1, 1, 1)
+                    theme_line_color: "Custom"
+                    line_color_normal: (1, 1, 1, 0.6)
+                    line_color_focus: (1, 1, 1, 1)
+                    error_color: "FF0000FF"
+                    on_text: root.clear_error()
+
+                    MDTextFieldTrailingIcon:
+                        icon: "gender-male-female"
+                        theme_icon_color: "Custom"
+                        icon_color_normal: (1, 1, 1, 1)
+                        icon_color_focus: (1, 1, 1, 1)
+
+                    MDTextFieldHintText:
+                        text: "Masukkan Jenis Kelamin"
+                        text_color_normal: (1, 1, 1, 0.8)
+                        text_color_focus: (1, 1, 1, 1)
+                    
+                    MDTextFieldHelperText:
+                        text: "(L/P)"
+                        mode: "persistent"
+                        theme_text_color: "Custom"
+                        text_color_normal: (1, 1, 1, 0.7)
+                        text_color_focus: (1, 1, 1, 0.7)
+                    
+                    MDTextFieldMaxLengthText:
+                        max_text_length: 1
+                        text_color_normal: (1, 1, 1, 0.5)
+                        text_color_focus: (1, 1, 1, 0.5)
+                
+                MDTextField:
+                    id: tanggal_lahir
+                    mode: "outlined"
+                    size_hint_x: None
+                    width: "400dp"
+                    pos_hint: {"center_x": .5, "center_y": .53}
+                    theme_text_color: "Custom"
+                    text_color_normal: (1, 1, 1, 1)
+                    text_color_focus: (1, 1, 1, 1)
+                    theme_line_color: "Custom"
+                    line_color_normal: (1, 1, 1, 0.6)
+                    line_color_focus: (1, 1, 1, 1)
+                    error_color: "FF0000FF"
+                    validator: "date"
+                    date_format: "dd/mm/yyyy"
+                    on_text: root.clear_error()
+
+                    MDTextFieldTrailingIcon:
+                        icon: "calendar"
+                        theme_icon_color: "Custom"
+                        icon_color_normal: (1, 1, 1, 1)
+                        icon_color_focus: (1, 1, 1, 1)
+
+                    MDTextFieldHintText:
+                        id: hint
+                        text: "DD/MM/YYYY"
+                        text_color_normal: (1, 1, 1, 0.8)
+                        text_color_focus: (1, 1, 1, 1)
+                    
+                    MDTextFieldHelperText:
+                        text: "Masukkan tanggal lahir sesuai format!"
+                        mode: "persistent"
+                        theme_text_color: "Custom"
+                        text_color_normal: (1, 1, 1, 0.7)
+                        text_color_focus: (1, 1, 1, 0.7)
+                
+                MDTextField:
+                    id: tb
+                    mode: "outlined"
+                    size_hint_x: None
+                    width: "400dp"
+                    pos_hint: {"center_x": .5, "center_y": .38}
+                    theme_text_color: "Custom"
+                    text_color_normal: (1, 1, 1, 1)
+                    text_color_focus: (1, 1, 1, 1)
+                    theme_line_color: "Custom"
+                    line_color_normal: (1, 1, 1, 0.6)
+                    line_color_focus: (1, 1, 1, 1)
+                    error_color: "FF0000FF"
+                    on_text: root.clear_error()
+
+                    MDTextFieldTrailingIcon:
+                        icon: "ruler"
+                        theme_icon_color: "Custom"
+                        icon_color_normal: (1, 1, 1, 1)
+                        icon_color_focus: (1, 1, 1, 1)
+
+                    MDTextFieldHintText:
+                        text: "Masukkan Tinggi Badan (cm)"
+                        text_color_normal: (1, 1, 1, 0.8)
+                        text_color_focus: (1, 1, 1, 1)
+                    
+                    MDTextFieldHelperText:
+                        text: "Isikan hanya angka!"
+                        mode: "on_error"
+                        theme_text_color: "Custom"
+                        text_color: (0.125, 0.227, 0.290, 1)
+                    
+                    MDTextFieldMaxLengthText:
+                        max_text_length: 3
+                        text_color_normal: (1, 1, 1, 0.5)
+                        text_color_focus: (1, 1, 1, 0.5)
+
+                MDTextField:
+                    id: bb
+                    mode: "outlined"
+                    size_hint_x: None
+                    width: "400dp"
+                    pos_hint: {"center_x": .5, "center_y": .23}
+                    theme_text_color: "Custom"
+                    text_color_normal: (1, 1, 1, 1)
+                    text_color_focus: (1, 1, 1, 1)
+                    theme_line_color: "Custom"
+                    line_color_normal: (1, 1, 1, 0.6)
+                    line_color_focus: (1, 1, 1, 1)
+                    error_color: "FF0000FF"
+                    on_text: root.clear_error()
+
+                    MDTextFieldTrailingIcon:
+                        icon: "scale"
+                        theme_icon_color: "Custom"
+                        icon_color_normal: (1, 1, 1, 1)
+                        icon_color_focus: (1, 1, 1, 1)
+
+                    MDTextFieldHintText:
+                        text: "Masukkan Berat Badan (kg)"
+                        text_color_normal: (1, 1, 1, 0.8)
+                        text_color_focus: (1, 1, 1, 1)
+                    
+                    MDTextFieldHelperText:
+                        text: "Isikan hanya angka!"
+                        mode: "on_error"
+                        theme_text_color: "Custom"
+                        text_color: (0.125, 0.227, 0.290, 1)
+                    
+                    MDTextFieldMaxLengthText:
+                        max_text_length: 3
+                        text_color_normal: (1, 1, 1, 0.5)
+                        text_color_focus: (1, 1, 1, 0.5)
+
+                MDLabel:
+                    id: error_label
+                    text: ""
+                    theme_font_name: "Custom"
+                    font_name: "Poppins-Medium"
+                    theme_font_size: "Custom"
+                    font_size: "15sp"
+                    pos_hint: {"center_x": .5, "center_y": .13}
+                    theme_text_color: "Custom"
+                    text_color: (1, 0, 0, 1)
+                    halign: "center"
+
+                MDButton:
+                    style: "outlined"
+                    pos_hint: {"center_x": 0.5, "center_y": 0.07}
+                    theme_bg_color: "Custom"
+                    md_bg_color: (0.125, 0.227, 0.290, 1)
+                    size_hint_x: 1
+                    on_release:
+                        root.validate4()
+
+                    MDButtonIcon:
+                        icon: "chevron-right"
+                        theme_icon_color: "Custom"
+                        icon_color: (1, 1, 1, 1)
+
+                    MDButtonText:
+                        text: "NEXT"
+                        theme_text_color: "Custom"
+                        theme_font_size: "Custom"
+                        font_size: "20sp"
+                        text_color: (1, 1, 1, 1)
+                        theme_font_name: "Custom"
+                        font_name: "Poppins-Medium"

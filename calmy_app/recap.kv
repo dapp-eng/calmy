@@ -1,0 +1,639 @@
+<RecapScreen>:
+    name: "recap"
+    MDFloatLayout:
+        md_bg_color: 1, 1, 1, 1
+
+        Image:
+            source: app.resource_path("assets/bg7.png")
+            size_hint: .85, .85
+            pos_hint: {"center_x": .5, "center_y": .48}
+
+        MDBoxLayout:
+            size_hint: 1, 0.105
+            pos_hint: {"top": 1}
+            canvas.before:
+                Color:
+                    rgba: (0.125, 0.227, 0.290, 1)
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            padding: 15, 0, 15, 0
+            spacing: 15
+
+            MDIconButton: 
+                pos_hint: {"center_x": .5, "center_y": .5}
+                on_release: nav_drawer.set_state("toggle")
+                icon: "menu"
+                theme_icon_color: "Custom"
+                theme_font_size: "Custom"
+                font_size: "30sp"
+                icon_color: (1, 1, 1, 1)
+                theme_bg_color: "Custom"
+                md_bg_color: (0.125, 0.227, 0.290, 1)
+                focus_color: (0.125, 0.227, 0.290, 0.4)
+                unfocus_color: (0.125, 0.227, 0.290, 1)
+            
+            Widget:
+                size_hint_y: None
+                weight: dp(150)
+
+            Image:
+                source: app.resource_path("assets/logo.jpg")
+                size_hint: None, None
+                size: 155, 155
+                pos_hint: {"center_x": .5, "center_y": 0.5}
+
+            Widget:
+                size_hint_y: None
+                weight: dp(150)
+
+            MDIconButton: 
+                pos_hint: {"center_x": .5, "center_y": .5}
+                on_release: app.change_screen("profil", "fade")
+                icon: "account-circle-outline"
+                theme_icon_color: "Custom"
+                icon_color: (1, 1, 1, 1)
+                theme_bg_color: "Custom"
+                md_bg_color: (0.125, 0.227, 0.290, 1)
+                theme_font_size: "Custom"
+                font_size: "37sp"
+                focus_color: (0.125, 0.227, 0.290, 0.4)
+                unfocus_color: (0.125, 0.227, 0.290, 1)
+            
+            MDIconButton: 
+                pos_hint: {"center_x": .5, "center_y": .5}
+                on_release: app.change_screen("notif", "fade")
+                icon: "bell-outline"
+                theme_icon_color: "Custom"
+                icon_color: (1, 1, 1, 1)
+                theme_bg_color: "Custom"
+                md_bg_color: (0.125, 0.227, 0.290, 1)
+                theme_font_size: "Custom"
+                font_size: "37sp"
+                focus_color: (0.125, 0.227, 0.290, 0.4)
+                unfocus_color: (0.125, 0.227, 0.290, 1)
+        
+
+        MDFloatLayout:
+            size_hint: 1, 0.9
+            pos_hint: {"top": .895}
+            canvas.before:
+                Color:
+                    rgba: (1, 1, 1, 0.1)
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            padding: 10, 10, 10, 10
+
+            MDCard:
+                style: "elevated"
+                size_hint: .44, .915
+                pos_hint: {"center_x": 0.247, "center_y": .51}
+                theme_shadow_color: "Custom"
+                shadow_color: 0.125, 0.227, 0.290, 0.5
+                theme_shadow_offset: "Custom"
+                shadow_offset: (-1, -2)
+                theme_shadow_softness: "Custom"
+                shadow_softness: 2
+                theme_elevation_level: "Custom"
+                elevation_level: 1
+                theme_bg_color: "Custom"
+                radius: [5,]
+                md_bg_color: (1, 1, 1, 1)
+                orientation: "vertical"
+                focus_color: (0, 0, 0, 0)
+
+                MDBoxLayout:
+                    size_hint_y: 0.12
+                    md_bg_color: (0.125, 0.227, 0.290, 1)
+                    orientation: "vertical"
+                    padding: "15dp"
+                    MDLabel:
+                        text: "- W & H Recap -"
+                        theme_text_color: "Custom"
+                        text_color: (1, 1, 1, 1)
+                        theme_font_name: "Custom"
+                        theme_font_size: "Custom"
+                        font_size: "30sp"
+                        font_name: "Poppins-Bold"
+                        halign: "center"
+                        valign: "center"
+                
+                RelativeLayout:
+
+                    Image:
+                        id: weight_chart
+                        source: ""
+                        size_hint: .615, .615
+                        pos_hint: {"center_x": 0.5, "center_y": .745}
+                    
+                    Image:
+                        id: height_chart
+                        source: ""
+                        size_hint: .615, .615
+                        pos_hint: {"center_x": 0.5, "center_y": .255}
+                        
+
+            MDCard:
+                style: "elevated"
+                size_hint: .345, .915
+                pos_hint: {"center_x": 0.65, "center_y": .51}
+                theme_shadow_color: "Custom"
+                shadow_color: 0.125, 0.227, 0.290, 0.5
+                theme_shadow_offset: "Custom"
+                shadow_offset: (-1, -2)
+                theme_shadow_softness: "Custom"
+                shadow_softness: 2
+                theme_elevation_level: "Custom"
+                elevation_level: 1
+                theme_bg_color: "Custom"
+                radius: [5,]
+                md_bg_color: (1, 1, 1, 1)
+                orientation: "vertical"
+                focus_color: (0, 0, 0, 0)
+
+                MDBoxLayout:
+                    size_hint_y: 0.12
+                    md_bg_color: (0.988, 0.671, 0.196, 1)
+                    orientation: "vertical"
+                    padding: "10dp"
+                    MDLabel:
+                        text: "- Calories Recap -"
+                        theme_text_color: "Custom"
+                        text_color: (1, 1, 1, 1)
+                        theme_font_name: "Custom"
+                        theme_font_size: "Custom"
+                        font_size: "30sp"
+                        font_name: "Poppins-Bold"
+                        halign: "center"
+                        valign: "center"
+                
+                RelativeLayout:
+
+                    Image:
+                        id: kalori_chart
+                        source: ""
+                        pos_hint: {"center_x": 0.5, "center_y": .705}
+
+                    MDLabel:
+                        text: "Attention!"
+                        pos_hint: {"center_x": .555, "center_y": .375}
+                        theme_text_color: "Custom"
+                        text_color: (0.125, 0.227, 0.290, 1)
+                        theme_font_name: "Custom"
+                        theme_font_size: "Custom"
+                        font_size: "20sp"
+                        font_name: "Poppins-SemiBold"
+                        halign: "center"
+                    
+                    MDIcon:
+                        icon: "alert-circle-outline"
+                        pos_hint: {"center_x": .415, "center_y": .379}
+                        theme_icon_color: "Custom"
+                        theme_font_size: "Custom"
+                        font_size: "30sp"
+                        icon_color: (0.125, 0.227, 0.290, 1)
+                    
+                    MDDivider:
+                        pos_hint: {"center_x": .5, "center_y": .327}
+                        color: (0.125, 0.227, 0.290, 0.65)
+                        size_hint_x: None
+                        width: dp(380)
+
+                    MDLabel:
+                        text: "Grafik yang ditampilkan bersumber dari data yang telah Anda inputkan selama satu minggu ini. Untuk review dari data Anda selama seminggu silahkan klik tombol berikut."
+                        pos_hint: {"center_x": .5, "center_y": .235}
+                        theme_text_color: "Custom"
+                        text_color: (0.125, 0.227, 0.290, 1)
+                        theme_font_name: "Custom"
+                        theme_font_size: "Custom"
+                        font_size: "14sp"
+                        font_name: "Poppins-Medium"
+                        halign: "center"
+                        padding: "50dp"
+                    
+                    MDButton:
+                        style: "filled"
+                        pos_hint: {"center_x": .5, "center_y": .105}
+                        theme_bg_color: "Custom"
+                        md_bg_color: (0.988, 0.671, 0.196, 1)
+                        size_hint: None, None
+                        size: 235, 55
+                        theme_width: "Custom"
+                        on_release:
+                            root.download_pdf()
+
+                        MDButtonText:
+                            text: "UNDUH GRAFIK"
+                            theme_text_color: "Custom"
+                            text_color: (1, 1, 1, 1)
+                            theme_font_name: "Custom"
+                            theme_font_size: "Custom"
+                            font_size: "19sp"
+                            font_name: "Poppins-Bold"
+                            halign: "center"
+                            pos_hint: {"center_x": .5, "center_y": .5}
+            
+            MDCard:
+                style: "outlined"
+                size_hint: .137, .265
+                pos_hint: {"center_x": 0.905, "center_y": 0.835}
+                elevation: 25
+                theme_bg_color: "Custom"
+                radius: [5, ]
+                md_bg_color: (1, 1, 1, 1)
+                orientation: "vertical"
+                focus_color: (0, 0, 0, 0)
+
+                MDBoxLayout:
+                    size_hint_y: 0.4
+                    md_bg_color: (0.988, 0.671, 0.196, 1)
+                    orientation: "vertical"
+                    padding: "10dp"
+                    MDIcon:
+                        icon: "calendar"
+                        pos_hint: {"center_x": .5, "center_y": .5}
+                        halign: "center"
+                        valign: "center"
+                        theme_icon_color: "Custom"
+                        theme_font_size: "Custom"
+                        icon_color: (1, 1, 1, 1)
+                        font_size: "40sp"
+
+                MDBoxLayout:
+                    orientation: "vertical"
+                    padding: "20dp"
+                    spacing: "3dp"
+
+                    MDLabel:
+                        text: "TODAY: "
+                        theme_text_color: "Custom"
+                        text_color: (0.988, 0.671, 0.196, 1)
+                        theme_font_name: "Custom"
+                        theme_font_size: "Custom"
+                        font_size: "22sp"
+                        font_name: "Poppins-SemiBold"
+                        halign: "center"
+
+                    MDLabel:
+                        id: day
+                        text: ""
+                        theme_text_color: "Custom"
+                        text_color: (0.125, 0.227, 0.290, 1)
+                        theme_font_name: "Custom"
+                        theme_font_size: "Custom"
+                        font_size: "28sp"
+                        font_name: "Poppins-Bold"
+                        halign: "center"
+            
+            MDCard:
+                style: "outlined"
+                size_hint: .137, .265
+                pos_hint: {"center_x": 0.905, "center_y": 0.511}
+                elevation: 25
+                theme_bg_color: "Custom"
+                radius: [5, ]
+                md_bg_color: (1, 1, 1, 1)
+                orientation: "vertical"
+                focus_color: (0, 0, 0, 0)
+
+                MDBoxLayout:
+                    size_hint_y: 0.4
+                    md_bg_color: (0.125, 0.227, 0.290, 1)
+                    orientation: "vertical"
+                    padding: "10dp"
+                    MDIcon:
+                        icon: "scale"
+                        pos_hint: {"center_x": .5, "center_y": .5}
+                        halign: "center"
+                        valign: "center"
+                        theme_icon_color: "Custom"
+                        theme_font_size: "Custom"
+                        icon_color: (1, 1, 1, 1)
+                        font_size: "40sp"
+
+                MDBoxLayout:
+                    orientation: "vertical"
+                    padding: "20dp"
+                    spacing: "3dp"
+
+                    MDLabel:
+                        text: "WEIGHT: "
+                        theme_text_color: "Custom"
+                        text_color: (0.125, 0.227, 0.290, 1)
+                        theme_font_name: "Custom"
+                        theme_font_size: "Custom"
+                        font_size: "22sp"
+                        font_name: "Poppins-SemiBold"
+                        halign: "center"
+
+                    MDLabel:
+                        id: bb
+                        text: ""
+                        theme_text_color: "Custom"
+                        text_color: (0.125, 0.227, 0.290, 1)
+                        theme_font_name: "Custom"
+                        theme_font_size: "Custom"
+                        font_size: "28sp"
+                        font_name: "Poppins-Bold"
+                        halign: "center"
+            
+            MDCard:
+                style: "outlined"
+                size_hint: .137, .265
+                pos_hint: {"center_x": 0.905, "center_y": 0.187}
+                elevation: 25
+                theme_bg_color: "Custom"
+                radius: [5, ]
+                md_bg_color: (1, 1, 1, 1)
+                orientation: "vertical"
+                focus_color: (0, 0, 0, 0)
+
+                MDBoxLayout:
+                    size_hint_y: 0.4
+                    md_bg_color: (0.125, 0.227, 0.290, 1)
+                    orientation: "vertical"
+                    padding: "10dp"
+                    MDIcon:
+                        icon: "ruler"
+                        pos_hint: {"center_x": .5, "center_y": .5}
+                        halign: "center"
+                        valign: "center"
+                        theme_icon_color: "Custom"
+                        theme_font_size: "Custom"
+                        icon_color: (1, 1, 1, 1)
+                        font_size: "40sp"
+
+                MDBoxLayout:
+                    orientation: "vertical"
+                    padding: "20dp"
+                    spacing: "3dp"
+
+                    MDLabel:
+                        text: "HEIGHT: "
+                        theme_text_color: "Custom"
+                        text_color: (0.125, 0.227, 0.290, 1)
+                        theme_font_name: "Custom"
+                        theme_font_size: "Custom"
+                        font_size: "22sp"
+                        font_name: "Poppins-SemiBold"
+                        halign: "center"
+
+                    MDLabel:
+                        id: tb
+                        text: ""
+                        theme_text_color: "Custom"
+                        text_color: (0.125, 0.227, 0.290, 1)
+                        theme_font_name: "Custom"
+                        theme_font_size: "Custom"
+                        font_size: "28sp"
+                        font_name: "Poppins-Bold"
+                        halign: "center"
+                
+
+        MDNavigationDrawer:
+            id: nav_drawer
+            padding: 20, 0, 0, 0
+            radius: 0, 0, 0, 0
+            background_color: (0.125, 0.227, 0.290, 1)
+            close_on_click : True
+
+            MDNavigationDrawerMenu:
+                id: menu_items
+                Image:
+                    source: app.resource_path("assets/logo.jpg")
+                    size_hint: None, None
+                    size: 150, 150
+                    pos_hint: {"top": 1, "center_x": 0.5}
+
+                MDNavigationDrawerLabel:
+                    text: "CALMY! - Calories Enemy"
+                    theme_text_color: "Custom"
+                    text_color: (1, 1, 1, 1)
+                    theme_font_name: "Custom"
+                    theme_font_size: "Custom"
+                    font_size: "18sp"
+                    font_name: "Poppins-SemiBold"
+                    halign: "left"
+
+                MDNavigationDrawerItem:
+                    id: dashboard_item
+                    theme_bg_color: "Custom"
+                    md_bg_color: [0.988, 0.671, 0.196, 1] if app.current_screen == "main" else [0.125, 0.227, 0.290, 1]
+                    focus_color: (0.988, 0.671, 0.196, 0.3)
+                    unfocus_color: (0.125, 0.227, 0.290, 1)
+                    radius: 0, 0, 0, 0
+                    active_indicator_color: (0.988, 0.671, 0.196, 1)
+                    inactive_indicator_color: (0.125, 0.227, 0.290, 1)
+                    scrim_color: (0, 0, 0, 1)
+                    on_release: 
+                        app.change_screen("main", "fade")
+
+                    MDNavigationDrawerItemLeadingIcon:
+                        icon: "view-dashboard"
+                        theme_icon_color: "Custom"
+                        icon_color: (1, 1, 1, 1)
+
+                    MDNavigationDrawerItemText:
+                        text: "DASHBOARD"
+                        theme_text_color: "Custom"
+                        text_color: (1, 1, 1, 1)
+                        theme_font_name: "Custom"
+                        font_name: "Poppins-Medium"
+
+                MDNavigationDrawerDivider:
+
+                MDNavigationDrawerItem:
+                    id: bmi_item
+                    theme_bg_color: "Custom"
+                    md_bg_color: [0.988, 0.671, 0.196, 1] if app.current_screen == "bmi" else [0.125, 0.227, 0.290, 1]
+                    radius: 0, 0, 0, 0
+                    active_indicator_color: (0.988, 0.671, 0.196, 1)
+                    inactive_indicator_color: (0.125, 0.227, 0.290, 1)
+                    scrim_color: (0, 0, 0, 1)
+                    focus_color: (0.988, 0.671, 0.196, 0.3)
+                    unfocus_color: (0.125, 0.227, 0.290, 1)
+                    on_release: 
+                        app.change_screen("bmi", "fade")
+
+                    MDNavigationDrawerItemLeadingIcon:
+                        icon: "heart-pulse"
+                        theme_icon_color: "Custom"
+                        icon_color: (1, 1, 1, 1)
+
+                    MDNavigationDrawerItemText:
+                        text: "BMI"
+                        theme_text_color: "Custom"
+                        text_color: (1, 1, 1, 1)
+                        theme_font_name: "Custom"
+                        font_name: "Poppins-Medium"
+
+                MDNavigationDrawerDivider:
+
+                MDNavigationDrawerItem:
+                    id: bmr_item
+                    theme_bg_color: "Custom"
+                    md_bg_color: [0.988, 0.671, 0.196, 1] if app.current_screen == "bmr" else [0.125, 0.227, 0.290, 1]
+                    radius: 0, 0, 0, 0
+                    active_indicator_color: (0.988, 0.671, 0.196, 1)
+                    inactive_indicator_color: (0.125, 0.227, 0.290, 1)
+                    scrim_color: (0, 0, 0, 1)
+                    focus_color: (0.988, 0.671, 0.196, 0.3)
+                    unfocus_color: (0.125, 0.227, 0.290, 1)
+                    on_release: 
+                        app.change_screen("bmr", "fade")
+
+                    MDNavigationDrawerItemLeadingIcon:
+                        icon: "fire"
+                        theme_icon_color: "Custom"
+                        icon_color: (1, 1, 1, 1)
+
+                    MDNavigationDrawerItemText:
+                        text: "BMR"
+                        theme_text_color: "Custom"
+                        text_color: (1, 1, 1, 1)
+                        theme_font_name: "Custom"
+                        font_name: "Poppins-Medium"
+
+                MDNavigationDrawerDivider:
+
+                MDNavigationDrawerItem:
+                    id: info_program_item
+                    theme_bg_color: "Custom"
+                    md_bg_color: [0.988, 0.671, 0.196, 1] if app.current_screen == "program" else [0.125, 0.227, 0.290, 1]
+                    radius: 0, 0, 0, 0
+                    active_indicator_color: (0.988, 0.671, 0.196, 1)
+                    inactive_indicator_color: (0.125, 0.227, 0.290, 1)
+                    scrim_color: (0, 0, 0, 1)
+                    focus_color: (0.988, 0.671, 0.196, 0.3)
+                    unfocus_color: (0.125, 0.227, 0.290, 1)
+                    on_release: 
+                        app.change_screen("program", "fade")
+
+                    MDNavigationDrawerItemLeadingIcon:
+                        icon: "tape-measure"
+                        theme_icon_color: "Custom"
+                        icon_color: (1, 1, 1, 1)
+
+                    MDNavigationDrawerItemText:
+                        text: "INFO PROGRAM"
+                        theme_text_color: "Custom"
+                        text_color: (1, 1, 1, 1)
+                        theme_font_name: "Custom"
+                        font_name: "Poppins-Medium"
+
+                MDNavigationDrawerDivider:
+
+                MDNavigationDrawerItem:
+                    id: daily_item
+                    theme_bg_color: "Custom"
+                    md_bg_color: [0.988, 0.671, 0.196, 1] if app.current_screen == "daily" else [0.125, 0.227, 0.290, 1]
+                    radius: 0, 0, 0, 0
+                    active_indicator_color: (0.988, 0.671, 0.196, 1)
+                    inactive_indicator_color: (0.125, 0.227, 0.290, 1)
+                    scrim_color: (0, 0, 0, 1)
+                    focus_color: (0.988, 0.671, 0.196, 0.3)
+                    unfocus_color: (0.125, 0.227, 0.290, 1)
+                    on_release: 
+                        app.change_screen("daily", "fade")
+
+                    MDNavigationDrawerItemLeadingIcon:
+                        icon: "silverware-fork-knife"
+                        theme_icon_color: "Custom"
+                        icon_color: (1, 1, 1, 1)
+
+                    MDNavigationDrawerItemText:
+                        text: "DAILY"
+                        theme_text_color: "Custom"
+                        text_color: (1, 1, 1, 1)
+                        theme_font_name: "Custom"
+                        font_name: "Poppins-Medium"
+
+                MDNavigationDrawerDivider:
+
+                MDNavigationDrawerItem:
+                    id: recap_item
+                    theme_bg_color: "Custom"
+                    md_bg_color: [0.988, 0.671, 0.196, 1] if app.current_screen == "recap" else [0.125, 0.227, 0.290, 1]
+                    radius: 0, 0, 0, 0
+                    active_indicator_color: (0.988, 0.671, 0.196, 1)
+                    inactive_indicator_color: (0.125, 0.227, 0.290, 1)
+                    scrim_color: (0, 0, 0, 1)
+                    focus_color: (0.988, 0.671, 0.196, 0.3)
+                    unfocus_color: (0.125, 0.227, 0.290, 1)
+                    on_release: 
+                        app.change_screen("recap", "fade")
+
+                    MDNavigationDrawerItemLeadingIcon:
+                        icon: "chart-bar"
+                        theme_icon_color: "Custom"
+                        icon_color: (1, 1, 1, 1)
+
+                    MDNavigationDrawerItemText:
+                        text: "RECAP"
+                        theme_text_color: "Custom"
+                        text_color: (1, 1, 1, 1)
+                        theme_font_name: "Custom"
+                        font_name: "Poppins-Medium"
+
+                MDNavigationDrawerDivider:
+                
+                MDNavigationDrawerItem:
+                    id: update_item
+                    theme_bg_color: "Custom"
+                    md_bg_color: [0.988, 0.671, 0.196, 1] if app.current_screen == "update" else [0.125, 0.227, 0.290, 1]
+                    radius: 0, 0, 0, 0
+                    active_indicator_color: (0.988, 0.671, 0.196, 1)
+                    inactive_indicator_color: (0.125, 0.227, 0.290, 1)
+                    scrim_color: (0, 0, 0, 1)
+                    focus_color: (0.988, 0.671, 0.196, 0.3)
+                    unfocus_color: (0.125, 0.227, 0.290, 1)
+                    on_release: 
+                        app.change_screen("update", "fade")
+
+                    MDNavigationDrawerItemLeadingIcon:
+                        icon: "scale-bathroom"
+                        theme_icon_color: "Custom"
+                        icon_color: (1, 1, 1, 1)
+
+                    MDNavigationDrawerItemText:
+                        text: "UPDATE"
+                        theme_text_color: "Custom"
+                        text_color: (1, 1, 1, 1)
+                        theme_font_name: "Custom"
+                        font_name: "Poppins-Medium"
+
+                MDNavigationDrawerDivider:
+
+                Widget:
+                    size_hint_y: None
+                    height: dp(100)              
+
+                MDButton:
+                    style: "elevated"
+                    pos_hint: {"bottom": 0.05, "center_x": 0.5}
+                    theme_bg_color: "Custom"
+                    md_bg_color: (1, 1, 1, 1)
+                    size_hint_x: 1
+                    on_release:
+                        app.logout()
+                    focus_color: (1, 1, 1, 0.4)
+                    unfocus_color: (1, 1, 1, 1)
+
+                    MDButtonIcon:
+                        icon: "power"
+                        theme_icon_color: "Custom"
+                        icon_color: (0.125, 0.227, 0.290, 1)
+
+                    MDButtonText:
+                        text: "LOG OUT"
+                        theme_text_color: "Custom"
+                        text_color: (0.125, 0.227, 0.290, 1)
+                        theme_font_name: "Custom"
+                        font_name: "Poppins-Medium"
+                
+                Widget:
+                    size_hint_y: None
+                    height: dp(25)

@@ -1,0 +1,44 @@
+<SplashScreen>:
+    name: "pre-splash"
+    MDFloatLayout:
+        md_bg_color: 0.125, 0.227, 0.290, 1
+        Image:
+            source: app.resource_path("assets/pre-splash.png")
+            size_hint: .98, .98
+            pos_hint: {"center_x": .5, "center_y": .55}
+    
+        MDCircularProgressIndicator:
+            color: (1, 1, 1, 1)
+            mode: "indeterminate"
+            pos_hint: {"center_x": .5, "center_y": .35}
+            size_hint: None, None
+            size: dp(26), dp(26)
+
+        MDLabel:
+            text: "CALORIES ENEMY: Daily Calories Counter App"
+            pos_hint: {"center_x": .5, "center_y": .15}
+            halign: "center"
+            theme_font_name: "Custom"
+            theme_font_size: "Custom"
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+            font_size: "19sp"
+            font_name: "Poppins-Medium"
+        
+        MDIcon:
+            icon: "information"
+            theme_icon_color: "Custom"
+            icon_color: (1, 1, 1, 0.8)
+            pos_hint: {"center_x": .5, "center_y": .925}
+            elevation: 30
+
+        MDLabel:
+            text: "Please set your screen to 'Full Screen'"
+            pos_hint: {"center_x": .5, "center_y": .88}
+            halign: "center"
+            theme_font_name: "Custom"
+            theme_font_size: "Custom"
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 0.8
+            font_size: "15sp"
+            font_name: "Poppins-Medium"

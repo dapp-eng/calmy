@@ -1,0 +1,105 @@
+<WelcomeScreen>:
+    name: "welcome"
+    MDFloatLayout:
+        md_bg_color: 1, 1, 1, 1
+        Image:
+            source: app.resource_path("assets/welcome.jpg")
+            size_hint: None, None
+            size: "1450dp", "850dp"
+            pos_hint: {"center_x": .5, "center_y": .69}
+        
+        MDIconButton:
+            id: menubutton
+            style: "filled"
+            pos_hint: {"center_x": .7, "center_y": .90}
+            on_release: app.menu_open()
+            icon: "menu"
+            theme_font_size: "Custom"
+            font_size: "35sp"
+            radius: [self.height / 2, ]
+            size_hint: None, None
+            size: "74dp", "74dp"
+            theme_bg_color: "Custom"
+            md_bg_color: (0.125, 0.227, 0.290, 1)
+
+        MDLabel:
+            text: "W E L C O M E !"
+            pos_hint: {"center_x": .5, "center_y": .65}
+            theme_text_color: "Custom"
+            text_color: (1, 1, 1, 1)
+            theme_font_name: "Custom"
+            theme_font_size: "Custom"
+            font_size: "58sp"
+            font_name: "Poppins-Bold"
+            halign: "center"
+
+        MDLabel:
+            text: "- Be Healthy Use CALMY! -"
+            pos_hint: {"center_x": .5, "center_y": .57}
+            theme_text_color: "Custom"
+            text_color: (1, 1, 1, 1)
+            theme_font_name: "Custom"
+            theme_font_size: "Custom"
+            font_size: "27sp"
+            font_name: "Poppins-SemiBold"
+            halign: "center"
+        
+        MDButton:
+            style: "filled"
+            pos_hint: {"center_x": .5, "center_y": .32}
+            theme_bg_color: "Custom"
+            md_bg_color: (0.125, 0.227, 0.290, 1)
+            theme_width: "Custom"
+            size_hint: None, None
+            size: 320, 90
+            radius: [dp(25)]
+            on_release:
+                app.change_screen("signup1", "fade")
+
+            MDButtonText:
+                text: "Sign Up"
+                theme_text_color: "Custom"
+                text_color: (1, 1, 1, 1)
+                theme_font_name: "Custom"
+                theme_font_size: "Custom"
+                font_size: "24sp"
+                font_name: "Poppins-Medium"
+                halign: "center"
+                pos_hint: {"center_x": .5, "center_y": .5}
+
+        MDButton:
+            style: "outlined"
+            pos_hint: {"center_x": .5, "center_y": .20}
+            theme_bg_color: "Custom"
+            md_bg_color: (1, 1, 1, 1)
+            theme_width: "Custom"
+            size_hint: None, None
+            size: 320, 90
+            radius: [dp(25)]
+            on_release:
+                app.change_screen("login", "fade")
+
+            MDButtonText:
+                text: "Log In"
+                theme_text_color: "Custom"
+                text_color: (0.125, 0.227, 0.290, 1)
+                theme_font_name: "Custom"
+                theme_font_size: "Custom"
+                font_size: "24sp"
+                font_name: "Poppins-Medium"
+                halign: "center"
+                pos_hint: {"center_x": .5, "center_y": .5}
+
+        MDLabel:
+            text: "By continuing you agree to Calmy!'s Terms of Service and Privacy Policy"
+            pos_hint: {"center_x": .5, "center_y": .10}
+            theme_text_color: "Custom"
+            text_color: (0.125, 0.227, 0.290, 1)
+            theme_font_name: "Custom"
+            theme_font_size: "Custom"
+            font_size: "16sp"
+            font_name: "Poppins-Regular"
+            halign: "center"
+
+        
+        

@@ -1,0 +1,335 @@
+<ProfilScreen>:
+    name: "profil"
+    MDFloatLayout:
+        md_bg_color: 1, 1, 1, 1
+
+        MDButton:
+            style: "filled"
+            pos_hint: {"center_x": 0.10, "center_y": 0.9}
+            theme_bg_color: "Custom"
+            md_bg_color: (1, 1, 1, 1)
+            size_hint_x: 1
+            on_release:
+                app.go_back()
+
+            MDButtonIcon:
+                icon: "chevron-left"
+                theme_icon_color: "Custom"
+                icon_color: (0.125, 0.227, 0.290, 1)
+                theme_font_size: "Custom"
+                font_size: "30sp"
+
+            MDButtonText:
+                text: "BACK"
+                theme_text_color: "Custom"
+                theme_font_size: "Custom"
+                font_size: "25sp"
+                text_color: (0.125, 0.227, 0.290, 1)
+                theme_font_name: "Custom"
+                font_name: "Poppins-Medium"
+            
+        MDIcon:
+            icon: "account-circle"
+            pos_hint: {"center_x": .41, "center_y": .755}
+            halign: "center"
+            valign: "center"
+            elevation: 35
+            theme_icon_color: "Custom"
+            theme_font_size: "Custom"
+            icon_color: (0.125, 0.227, 0.290, 1)
+            size_hint: None, None
+            size: "100dp", "100dp"
+            font_size: "195sp"
+            
+        MDLabel:
+            id: namalengkap
+            text: ""
+            pos_hint: {"center_x": .978, "center_y": .8}
+            padding: "10dp"
+            theme_text_color: "Custom"
+            text_color: (0.125, 0.227, 0.290, 1)
+            theme_font_name: "Custom"
+            theme_font_size: "Custom"
+            font_size: "32sp"
+            font_name: "Poppins-Bold"
+            halign: "left"
+        
+        MDLabel:
+            id: user
+            text: ""
+            pos_hint: {"center_x": .978, "center_y": .755}
+            padding: "10dp"
+            theme_text_color: "Custom"
+            text_color: (0.125, 0.227, 0.290, 1)
+            theme_font_name: "Custom"
+            theme_font_size: "Custom"
+            font_size: "21sp"
+            font_name: "Poppins-Medium"
+            halign: "left"
+        
+        MDButton:
+            style: "filled"
+            pos_hint: {"center_x": .54, "center_y": .7}
+            theme_bg_color: "Custom"
+            md_bg_color: (0.988, 0.671, 0.196, 1)
+            size_hint: None, None
+            size: 235, 47
+            theme_width: "Custom"
+            on_release:
+                app.change_screen("verif", "fade")
+
+            MDButtonText:
+                text: "Ubah Username?"
+                theme_text_color: "Custom"
+                text_color: (1, 1, 1, 1)
+                theme_font_name: "Custom"
+                theme_font_size: "Custom"
+                font_size: "15sp"
+                font_name: "Poppins-SemiBold"
+                halign: "center"
+                pos_hint: {"center_x": .5, "center_y": .5}
+
+        
+        MDCard:
+            style: "elevated"
+            size_hint: .55, .225
+            pos_hint: {"center_x": 0.5, "center_y": 0.485}
+            theme_shadow_color: "Custom"
+            shadow_color: 0.125, 0.227, 0.290, 0.5
+            theme_shadow_offset: "Custom"
+            shadow_offset: (-1, -2)
+            theme_shadow_softness: "Custom"
+            shadow_softness: 2
+            theme_elevation_level: "Custom"
+            elevation_level: 1
+            theme_bg_color: "Custom"
+            radius: [5,]
+            padding: [0, 10, 0, 0]
+            md_bg_color: (1, 1, 1, 1)
+            orientation: "vertical"
+            focus_color: (0, 0, 0, 0)
+
+            RelativeLayout:
+
+                MDIcon:
+                    icon: "scale"
+                    pos_hint: {"center_x": .165, "center_y": .815}
+                    halign: "center"
+                    valign: "center"
+                    elevation: 35
+                    theme_icon_color: "Custom"
+                    theme_font_size: "Custom"
+                    icon_color: (0.988, 0.671, 0.196, 1)
+                    font_size: "55sp"
+                
+                MDLabel:
+                    text: "Berat Badan:"
+                    pos_hint: {"center_x": .165, "center_y": .455}
+                    padding: "10dp"
+                    theme_text_color: "Custom"
+                    text_color: (0.125, 0.227, 0.290, 1)
+                    theme_font_name: "Custom"
+                    theme_font_size: "Custom"
+                    font_size: "22sp"
+                    font_name: "Poppins-Bold"
+                    halign: "center"
+                    
+                MDLabel:
+                    id: bb
+                    text: ""
+                    pos_hint: {"center_x": .165, "center_y": .195}
+                    padding: "10dp"
+                    theme_text_color: "Custom"
+                    text_color: (0.988, 0.671, 0.196, 1)
+                    theme_font_name: "Custom"
+                    theme_font_size: "Custom"
+                    font_size: "27sp"
+                    font_name: "Poppins-Bold"
+                    halign: "center"
+                
+
+                MDIcon:
+                    icon: "ruler"
+                    pos_hint: {"center_x": .5, "center_y": .815}
+                    halign: "center"
+                    valign: "center"
+                    elevation: 35
+                    theme_icon_color: "Custom"
+                    theme_font_size: "Custom"
+                    icon_color: (0.988, 0.671, 0.196, 1)
+                    font_size: "55sp"
+                
+                MDLabel:
+                    text: "Tinggi Badan:"
+                    pos_hint: {"center_x": .5, "center_y": .455}
+                    padding: "10dp"
+                    theme_text_color: "Custom"
+                    text_color: (0.125, 0.227, 0.290, 1)
+                    theme_font_name: "Custom"
+                    theme_font_size: "Custom"
+                    font_size: "22sp"
+                    font_name: "Poppins-Bold"
+                    halign: "center"
+                    
+                MDLabel:
+                    id: tb
+                    text: ""
+                    pos_hint: {"center_x": .5, "center_y": .195}
+                    padding: "10dp"
+                    theme_text_color: "Custom"
+                    text_color: (0.988, 0.671, 0.196, 1)
+                    theme_font_name: "Custom"
+                    theme_font_size: "Custom"
+                    font_size: "27sp"
+                    font_name: "Poppins-Bold"
+                    halign: "center"
+
+
+                MDIcon:
+                    icon: "calendar"
+                    pos_hint: {"center_x": .835, "center_y": .815}
+                    halign: "center"
+                    valign: "center"
+                    elevation: 35
+                    theme_icon_color: "Custom"
+                    theme_font_size: "Custom"
+                    icon_color: (0.988, 0.671, 0.196, 1)
+                    font_size: "55sp"
+                
+                MDLabel:
+                    text: "Tanggal Lahir:"
+                    pos_hint: {"center_x": .835, "center_y": .455}
+                    padding: "10dp"
+                    theme_text_color: "Custom"
+                    text_color: (0.125, 0.227, 0.290, 1)
+                    theme_font_name: "Custom"
+                    theme_font_size: "Custom"
+                    font_size: "22sp"
+                    font_name: "Poppins-Bold"
+                    halign: "center"
+                    
+                MDLabel:
+                    id: lahir
+                    text: ""
+                    pos_hint: {"center_x": .835, "center_y": .195}
+                    padding: "10dp"
+                    theme_text_color: "Custom"
+                    text_color: (0.988, 0.671, 0.196, 1)
+                    theme_font_name: "Custom"
+                    theme_font_size: "Custom"
+                    font_size: "26sp"
+                    font_name: "Poppins-Bold"
+                    halign: "center"
+        
+        MDCard:
+            style: "elevated"
+            size_hint: .55, .115
+            pos_hint: {"center_x": 0.5, "center_y": 0.275}
+            theme_shadow_color: "Custom"
+            shadow_color: 0.125, 0.227, 0.290, 0.5
+            theme_shadow_offset: "Custom"
+            shadow_offset: (-1, -2)
+            theme_shadow_softness: "Custom"
+            shadow_softness: 2
+            theme_elevation_level: "Custom"
+            elevation_level: 1
+            theme_bg_color: "Custom"
+            radius: [5,]
+            md_bg_color: (1, 1, 1, 1)
+            orientation: "vertical"
+            focus_color: (0, 0, 0, 0)
+            on_release:
+                app.change_screen("about", "fade")
+
+            RelativeLayout:
+
+                MDIcon:
+                    icon: "comment-question-outline"
+                    pos_hint: {"center_x": .07, "center_y": .505}
+                    halign: "center"
+                    valign: "center"
+                    elevation: 35
+                    theme_icon_color: "Custom"
+                    theme_font_size: "Custom"
+                    icon_color: (0.125, 0.227, 0.290, 1)
+                    font_size: "40sp"
+                    
+                MDLabel:
+                    text: "About Us!"
+                    pos_hint: {"center_x": .195, "center_y": .5}
+                    padding: "10dp"
+                    theme_text_color: "Custom"
+                    text_color: (0.125, 0.227, 0.290, 1)
+                    theme_font_name: "Custom"
+                    theme_font_size: "Custom"
+                    font_size: "22sp"
+                    font_name: "Poppins-SemiBold"
+                    halign: "center"
+                
+                MDIcon:
+                    icon: "chevron-right-circle-outline"
+                    pos_hint: {"center_x": .915, "center_y": .5}
+                    halign: "center"
+                    valign: "center"
+                    elevation: 35
+                    theme_icon_color: "Custom"
+                    theme_font_size: "Custom"
+                    icon_color: (0.125, 0.227, 0.290, 1)
+                    font_size: "38sp"
+        
+        MDCard:
+            style: "elevated"
+            size_hint: .55, .115
+            pos_hint: {"center_x": 0.5, "center_y": 0.125}
+            theme_shadow_color: "Custom"
+            shadow_color: 0.125, 0.227, 0.290, 0.5
+            theme_shadow_offset: "Custom"
+            shadow_offset: (-1, -2)
+            theme_shadow_softness: "Custom"
+            shadow_softness: 2
+            theme_elevation_level: "Custom"
+            elevation_level: 1
+            theme_bg_color: "Custom"
+            radius: [5,]
+            md_bg_color: (1, 1, 1, 1)
+            orientation: "vertical"
+            focus_color: (0, 0, 0, 0)
+            on_release:
+                app.change_screen("info", "fade")
+
+            RelativeLayout:
+
+                MDIcon:
+                    icon: "information-outline"
+                    pos_hint: {"center_x": .07, "center_y": .505}
+                    halign: "center"
+                    valign: "center"
+                    elevation: 35
+                    theme_icon_color: "Custom"
+                    theme_font_size: "Custom"
+                    icon_color: (0.125, 0.227, 0.290, 1)
+                    font_size: "40sp"
+                    
+                MDLabel:
+                    text: "Information!"
+                    pos_hint: {"center_x": .195, "center_y": .5}
+                    padding: "10dp"
+                    theme_text_color: "Custom"
+                    text_color: (0.125, 0.227, 0.290, 1)
+                    theme_font_name: "Custom"
+                    theme_font_size: "Custom"
+                    font_size: "22sp"
+                    font_name: "Poppins-SemiBold"
+                    halign: "center"
+                
+                MDIcon:
+                    icon: "chevron-right-circle-outline"
+                    pos_hint: {"center_x": .915, "center_y": .5}
+                    halign: "center"
+                    valign: "center"
+                    elevation: 35
+                    theme_icon_color: "Custom"
+                    theme_font_size: "Custom"
+                    icon_color: (0.125, 0.227, 0.290, 1)
+                    font_size: "38sp"
+        

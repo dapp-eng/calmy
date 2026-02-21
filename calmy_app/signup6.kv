@@ -1,0 +1,78 @@
+<Signup6Screen>:
+    name: "signup6"
+    MDFloatLayout:
+        md_bg_color: 1, 1, 1, 1
+
+        MDCard:
+            size_hint: None, None
+            size: "450dp", "625dp"
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            elevation: 10
+            theme_bg_color: "Custom"
+            md_bg_color: (0.125, 0.227, 0.290, 1)
+            padding: "5dp"
+            orientation: "vertical"
+            focus_color: (0.125, 0.227, 0.290, 0)
+            unfocus_color: (0.125, 0.227, 0.290, 1)
+            
+            RelativeLayout:
+
+                MDLabel:
+                    text: "- S E L A M A T -"
+                    pos_hint: {"center_x": .5, "center_y": .87}
+                    theme_text_color: "Custom"
+                    text_color: (1, 1, 1, 1)
+                    theme_font_name: "Custom"
+                    theme_font_size: "Custom"
+                    font_size: "40sp"
+                    font_name: "Poppins-Bold"
+                    halign: "center"
+                
+                MDLabel:
+                    text: "Anda Telah Berhasil Sign Up"
+                    pos_hint: {"center_x": .5, "center_y": .78}
+                    theme_text_color: "Custom"
+                    text_color: (1, 1, 1, 1)
+                    theme_font_name: "Custom"
+                    theme_font_size: "Custom"
+                    font_size: "25sp"
+                    font_name: "Poppins-Bold"
+                    halign: "center"
+                
+                Image:
+                    source: app.resource_path("assets/jlogo.png")
+                    size_hint: .28, .28
+                    pos_hint: {"center_x": .5, "center_y": .61}
+
+                MDLabel:
+                    text: "Silahkan login dengan meng-klik tombol berikut!"
+                    pos_hint: {"center_x": .5, "center_y": .43}
+                    theme_text_color: "Custom"
+                    text_color: (1, 1, 1, 1)
+                    theme_font_name: "Custom"
+                    theme_font_size: "Custom"
+                    font_size: "18sp"
+                    font_name: "Poppins-SemiBold"
+                    halign: "center"
+                
+                MDButton:
+                    style: "filled"
+                    pos_hint: {"center_x": .5, "center_y": .28}
+                    theme_bg_color: "Custom"
+                    md_bg_color: (1, 1, 1, 1)
+                    size_hint: None, None
+                    size: 200, 70
+                    theme_width: "Custom"
+                    on_release:
+                        app.change_screen("login", "fade")
+
+                    MDButtonText:
+                        text: "LOG IN"
+                        theme_text_color: "Custom"
+                        text_color: (0.125, 0.227, 0.290, 1)
+                        theme_font_name: "Custom"
+                        theme_font_size: "Custom"
+                        font_size: "22sp"
+                        font_name: "Poppins-SemiBold"
+                        halign: "center"
+                        pos_hint: {"center_x": .5, "center_y": .5}

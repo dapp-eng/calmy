@@ -1,0 +1,86 @@
+<ReviewScreen>:
+    name: "review"
+    MDFloatLayout:
+        md_bg_color: 0.125, 0.227, 0.290, 1
+
+        MDCard:
+            size_hint: None, None
+            size: "800dp", "700dp"
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            elevation: 10
+            theme_bg_color: "Custom"
+            md_bg_color: (1, 1, 1, 1)
+            padding: "15dp"
+            orientation: "vertical"
+            focus_color: (1, 1, 1, 0)
+            unfocus_color: (1, 1, 1, 1)
+
+            RelativeLayout:
+
+                MDButton:
+                    style: "filled"
+                    pos_hint: {"center_x": 0.10, "center_y": 0.95}
+                    theme_bg_color: "Custom"
+                    md_bg_color: (1, 1, 1, 1)
+                    size_hint_x: 1
+                    on_release:
+                        app.go_back()
+
+                    MDButtonIcon:
+                        icon: "chevron-left"
+                        theme_icon_color: "Custom"
+                        icon_color: (0.125, 0.227, 0.290, 1)
+                        theme_font_size: "Custom"
+                        font_size: "27sp"
+
+                    MDButtonText:
+                        text: "BACK"
+                        theme_text_color: "Custom"
+                        theme_font_size: "Custom"
+                        font_size: "23sp"
+                        text_color: (0.125, 0.227, 0.290, 1)
+                        theme_font_name: "Custom"
+                        font_name: "Poppins-Medium"
+
+                MDLabel:
+                    text: "- Recap Mingguan -"
+                    pos_hint: {"center_x": 0.5, "center_y": 0.805}
+                    theme_text_color: "Custom"
+                    text_color: (0.125, 0.227, 0.290, 1)
+                    theme_font_name: "Custom"
+                    theme_font_size: "Custom"
+                    font_size: "30sp"
+                    font_name: "Poppins-Bold"
+                    halign: "center"
+                    valign: "center"
+
+                MDLabel:
+                    text: "Berikut ini adalah hasil rekapan kalori, tinggi badan dan berat badan Anda selama menggunakan Aplikasi ini."
+                    pos_hint: {"center_x": .5, "center_y": .605}
+                    theme_text_color: "Custom"
+                    text_color: (0.125, 0.227, 0.290, 1)
+                    theme_font_name: "Custom"
+                    theme_font_size: "Custom"
+                    font_size: "15sp"
+                    font_name: "Poppins-Medium"
+                    halign: "center"
+                    padding: "50dp" 
+            
+            MDScrollView:
+                size_hint: 1, None
+                height: "450dp"
+                pos_hint: {"center_x": .5, "center_y": .5}
+                MDLabel:
+                    id: weekly
+                    text: root.review_text
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    theme_text_color: "Custom"
+                    spacing: 5
+                    padding: "30dp"
+                    text_color: (0.125, 0.227, 0.290, 1)
+                    theme_font_name: "Custom"
+                    theme_font_size: "Custom"
+                    font_size: "16sp"
+                    font_name: "Poppins-SemiBold"
+                    halign: "center"
+                    adaptive_height: True

@@ -1,0 +1,125 @@
+<Signup1Screen>:
+    name: "signup1"
+    MDFloatLayout:
+        md_bg_color: 1, 1, 1, 1
+
+        MDCard:
+            size_hint: None, None
+            size: "450dp", "625dp"
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            elevation: 10
+            theme_bg_color: "Custom"
+            md_bg_color: (0.125, 0.227, 0.290, 1)
+            padding: "5dp"
+            orientation: "vertical"
+            focus_color: (0.125, 0.227, 0.290, 0)
+            unfocus_color: (0.125, 0.227, 0.290, 1)
+            
+            RelativeLayout:
+
+                MDButton:
+                    style: "filled"
+                    pos_hint: {"center_x": 0.13, "center_y": 0.96}
+                    theme_bg_color: "Custom"
+                    md_bg_color: (0.125, 0.227, 0.290, 1)
+                    size_hint_x: 1
+                    on_release:
+                        app.change_screen("welcome", "fade")
+
+                    MDButtonIcon:
+                        icon: "chevron-left"
+                        theme_icon_color: "Custom"
+                        icon_color: (1, 1, 1, 1)
+
+                    MDButtonText:
+                        text: "BACK"
+                        theme_text_color: "Custom"
+                        theme_font_size: "Custom"
+                        font_size: "18sp"
+                        text_color: (1, 1, 1, 1)
+                        theme_font_name: "Custom"
+                        font_name: "Poppins-Medium"
+
+                MDLabel:
+                    text: "- W E L C O M E -"
+                    pos_hint: {"center_x": .5, "center_y": .87}
+                    theme_text_color: "Custom"
+                    text_color: (1, 1, 1, 1)
+                    theme_font_name: "Custom"
+                    theme_font_size: "Custom"
+                    font_size: "40sp"
+                    font_name: "Poppins-Bold"
+                    halign: "center"
+                
+                MDLabel:
+                    text: "T O  C A L M Y!"
+                    pos_hint: {"center_x": .5, "center_y": .80}
+                    theme_text_color: "Custom"
+                    text_color: (1, 1, 1, 1)
+                    theme_font_name: "Custom"
+                    theme_font_size: "Custom"
+                    font_size: "25sp"
+                    font_name: "Poppins-Bold"
+                    halign: "center"
+               
+                Image:
+                    source: app.resource_path("assets/jlogo.png")
+                    size_hint: .25, .25
+                    pos_hint: {"center_x": .5, "center_y": .65}
+
+                MDLabel:
+                    text: "YOUR DAILY APP CALORIES ENEMY"
+                    pos_hint: {"center_x": .5, "center_y": .51}
+                    theme_text_color: "Custom"
+                    text_color: (1, 1, 1, 1)
+                    theme_font_name: "Custom"
+                    theme_font_size: "Custom"
+                    font_size: "18sp"
+                    font_name: "Poppins-SemiBold"
+                    halign: "center"
+                
+                MDLabel:
+                    text: "Untuk pengguna baru, silahkan mengisi data sesuai dengan diri Anda. Pastikan data yang diisikan sesuai."
+                    pos_hint: {"center_x": .5, "center_y": .41}
+                    spacing: 6
+                    padding: 7
+                    theme_text_color: "Custom"
+                    text_color: (1, 1, 1, 1)
+                    theme_font_name: "Custom"
+                    theme_font_size: "Custom"
+                    font_size: "16sp"
+                    font_name: "Poppins-SemiBold"
+                    halign: "center"
+                
+                MDLabel:
+                    text: "- Thank You, Be Healthy Use CALMY!:) -"
+                    pos_hint: {"center_x": .5, "center_y": .21}
+                    theme_text_color: "Custom"
+                    text_color: (1, 1, 1, 1)
+                    theme_font_name: "Custom"
+                    theme_font_size: "Custom"
+                    font_size: "16sp"
+                    font_name: "Poppins-SemiBold"
+                    halign: "center"
+
+                MDButton:
+                    style: "filled"
+                    pos_hint: {"center_x": .5, "center_y": .10}
+                    theme_bg_color: "Custom"
+                    md_bg_color: (1, 1, 1, 1)
+                    size_hint: None, None
+                    size: 150, 50
+                    theme_width: "Custom"
+                    on_release:
+                        app.change_screen("signup2", "fade")
+
+                    MDButtonText:
+                        text: "SIGN UP"
+                        theme_text_color: "Custom"
+                        text_color: (0.125, 0.227, 0.290, 1)
+                        theme_font_name: "Custom"
+                        theme_font_size: "Custom"
+                        font_size: "16sp"
+                        font_name: "Poppins-SemiBold"
+                        halign: "center"
+                        pos_hint: {"center_x": .5, "center_y": .5}

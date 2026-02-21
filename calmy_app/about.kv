@@ -1,0 +1,81 @@
+<AboutScreen>:
+    name: "about"
+    MDFloatLayout:
+        md_bg_color: 0.125, 0.227, 0.290, 1
+
+        MDCard:
+            size_hint: None, None
+            size: "800dp", "700dp"
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            elevation: 10
+            theme_bg_color: "Custom"
+            md_bg_color: (1, 1, 1, 1)
+            padding: "15dp"
+            orientation: "vertical"
+            focus_color: (1, 1, 1, 0)
+            unfocus_color: (1, 1, 1, 1)
+            
+            RelativeLayout:
+
+                MDButton:
+                    style: "filled"
+                    pos_hint: {"center_x": 0.10, "center_y": 0.95}
+                    theme_bg_color: "Custom"
+                    md_bg_color: (1, 1, 1, 1)
+                    size_hint_x: 1
+                    on_release:
+                        app.go_back()
+
+                    MDButtonIcon:
+                        icon: "chevron-left"
+                        theme_icon_color: "Custom"
+                        icon_color: (0.125, 0.227, 0.290, 1)
+                        theme_font_size: "Custom"
+                        font_size: "27sp"
+
+                    MDButtonText:
+                        text: "BACK"
+                        theme_text_color: "Custom"
+                        theme_font_size: "Custom"
+                        font_size: "23sp"
+                        text_color: (0.125, 0.227, 0.290, 1)
+                        theme_font_name: "Custom"
+                        font_name: "Poppins-Medium"
+                
+                MDIcon:
+                    icon: "comment-question-outline"
+                    pos_hint: {"center_x": .83, "center_y": .95}
+                    theme_icon_color: "Custom"
+                    theme_font_size: "Custom"
+                    font_size: "30sp"
+                    icon_color: (0.125, 0.227, 0.290, 1)
+
+                MDLabel:
+                    text: "About"
+                    pos_hint: {"center_x": .90, "center_y": .945}
+                    theme_text_color: "Custom"
+                    text_color: (0.125, 0.227, 0.290, 1)
+                    theme_font_name: "Custom"
+                    theme_font_size: "Custom"
+                    font_size: "24sp"
+                    font_name: "Poppins-Medium"
+                    halign: "center"
+
+                Image:
+                    source: app.resource_path("assets/unesa.png")
+                    size_hint: .25, .25
+                    pos_hint: {"center_x": .5, "center_y": .76}
+
+                MDLabel:
+                    text: "Calmy adalah aplikasi penghitung kalori yang dirancang untuk membantu pengguna dalam mengelola pola makan, menjaga kesehatan, dan mencapai gaya hidup yang lebih seimbang. Aplikasi ini menawarkan fitur-fitur yang mempermudah pemantauan asupan kalori harian secara praktis dan efektif.\nAplikasi pemantau kalori ini dikembangkan oleh Illona Anindya, Daffa Ahmad Pangreksa, dan Cyriani Neuman Rebo, yang merupakan mahasiswa jurusan Sains Data Universitas Negeri Surabaya. Pembuatan aplikasi ini sebagai bagian dari tugas proyek dalam mata kuliah Pemrograman Dasar di bawah bimbingan Bapak Hasanudin Al-Habib, M.Si.\nAplikasi ini juga merupakan bagian dari upaya kami sebagai mahasiswa UNESA dalam mengembangkan kreativitas dan inovasi sehingga bisa menciptakan solusi berbasis teknologi yang bermanfaat bagi masyarakat. Melalui aplikasi ini, kami berharap dapat memperkuat citra kampus sebagai wadah lahirnya generasi unggul yang bisa beradaptasi dengan teknologi saat ini."
+                    pos_hint: {"center_x": .5, "center_y": .30}
+                    theme_text_color: "Custom"
+                    spacing: 5
+                    padding: "30dp"
+                    text_color: (0.125, 0.227, 0.290, 1)
+                    theme_font_name: "Custom"
+                    theme_font_size: "Custom"
+                    font_size: "16sp"
+                    font_name: "Poppins-SemiBold"
+                    halign: "justify"
+        

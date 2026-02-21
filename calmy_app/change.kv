@@ -1,0 +1,287 @@
+<ChangeScreen>:
+    name: "change"
+    MDFloatLayout:
+        md_bg_color: 1, 1, 1, 1
+
+        MDCard:
+            size_hint: None, None
+            size: "550dp", "725dp"
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            elevation: 10
+            theme_bg_color: "Custom"
+            md_bg_color: (0.125, 0.227, 0.290, 1)
+            padding: "5dp"
+            orientation: "vertical"
+            focus_color: (0.125, 0.227, 0.290, 0)
+            unfocus_color: (0.125, 0.227, 0.290, 1)
+            
+            RelativeLayout:
+
+                MDButton:
+                    style: "filled"
+                    pos_hint: {"center_x": 0.13, "center_y": 0.96}
+                    theme_bg_color: "Custom"
+                    md_bg_color: (0.125, 0.227, 0.290, 1)
+                    size_hint_x: 1
+                    on_release:
+                        app.go_back()
+
+                    MDButtonIcon:
+                        icon: "chevron-left"
+                        theme_icon_color: "Custom"
+                        icon_color: (1, 1, 1, 1)
+
+                    MDButtonText:
+                        text: "BACK"
+                        theme_text_color: "Custom"
+                        theme_font_size: "Custom"
+                        font_size: "18sp"
+                        text_color: (1, 1, 1, 1)
+                        theme_font_name: "Custom"
+                        font_name: "Poppins-Medium"
+
+                MDLabel:
+                    text: "- CHANGE DATA -"
+                    pos_hint: {"center_x": .5, "center_y": .89}
+                    theme_text_color: "Custom"
+                    text_color: (1, 1, 1, 1)
+                    theme_font_name: "Custom"
+                    theme_font_size: "Custom"
+                    font_size: "38sp"
+                    font_name: "Poppins-Bold"
+                    halign: "center"
+                
+                MDLabel:
+                    text: "Untuk mengubah data Anda, silahkan mengisi pada kolom yang disediakan. Isikan setidaknya satu kolom yang ingin diubah."
+                    pos_hint: {"center_x": .5, "center_y": .8}
+                    theme_text_color: "Custom"
+                    text_color: (1, 1, 1, 1)
+                    theme_font_name: "Custom"
+                    theme_font_size: "Custom"
+                    font_size: "15sp"
+                    font_name: "Poppins-Medium"
+                    halign: "center"
+                    padding: "25dp"
+                
+                MDTextField:
+                    id: user
+                    mode: "outlined"
+                    size_hint_x: None
+                    width: "400dp"
+                    pos_hint: {"center_x": .5, "center_y": .695}
+                    theme_text_color: "Custom"
+                    text_color_normal: (1, 1, 1, 1)
+                    text_color_focus: (1, 1, 1, 1)
+                    theme_line_color: "Custom"
+                    line_color_normal: (1, 1, 1, 0.6)
+                    line_color_focus: (1, 1, 1, 1)
+                    on_text: root.clear_error()
+
+                    MDTextFieldTrailingIcon:
+                        icon: "account-outline"
+                        theme_icon_color: "Custom"
+                        icon_color_normal: (1, 1, 1, 1)
+                        icon_color_focus: (1, 1, 1, 1)
+
+                    MDTextFieldHintText:
+                        text: "Masukkan Username Baru (maks. 10 karakter)"
+                        text_color_normal: (1, 1, 1, 0.8)
+                        text_color_focus: (1, 1, 1, 1)
+                    
+                    MDTextFieldMaxLengthText:
+                        max_text_length: 10
+                        theme_text_color: "Custom"
+                        text_color_normal: (1, 1, 1, 0.5)
+                        text_color_focus: (1, 1, 1, 0.5)
+                    
+                    MDTextFieldHelperText:
+                        text: "Pastikan username terisi dengan benar!"
+                        mode: "on_error"
+                        theme_text_color: "Custom"
+                        text_color: (0.125, 0.227, 0.290, 1)
+                
+                MDTextField:
+                    id: namalengkap
+                    mode: "outlined"
+                    size_hint_x: None
+                    width: "400dp"
+                    pos_hint: {"center_x": .5, "center_y": .575}
+                    theme_text_color: "Custom"
+                    text_color_normal: (1, 1, 1, 1)
+                    text_color_focus: (1, 1, 1, 1)
+                    theme_line_color: "Custom"
+                    line_color_normal: (1, 1, 1, 0.6)
+                    line_color_focus: (1, 1, 1, 1)
+                    on_text: root.clear_error()
+
+                    MDTextFieldTrailingIcon:
+                        icon: "card-account-details-outline"
+                        theme_icon_color: "Custom"
+                        icon_color_normal: (1, 1, 1, 1)
+                        icon_color_focus: (1, 1, 1, 1)
+
+                    MDTextFieldHintText:
+                        text: "Masukkan Nama Lengkap Baru"
+                        text_color_normal: (1, 1, 1, 0.8)
+                        text_color_focus: (1, 1, 1, 1)
+                    
+                    MDTextFieldHelperText:
+                        text: "Contoh format nama yang benar: 'Budi Man'"
+                        mode: "persistent"
+                        theme_text_color: "Custom"
+                        text_color_normal: (1, 1, 1, 0.7)
+                        text_color_focus: (1, 1, 1, 0.7)
+                
+                MDTextField:
+                    id: tanggal_lahir
+                    mode: "outlined"
+                    size_hint_x: None
+                    width: "400dp"
+                    pos_hint: {"center_x": .5, "center_y": .455}
+                    theme_text_color: "Custom"
+                    text_color_normal: (1, 1, 1, 1)
+                    text_color_focus: (1, 1, 1, 1)
+                    theme_line_color: "Custom"
+                    line_color_normal: (1, 1, 1, 0.6)
+                    line_color_focus: (1, 1, 1, 1)
+                    error_color: "FF0000FF"
+                    validator: "date"
+                    date_format: "dd/mm/yyyy"
+
+                    MDTextFieldTrailingIcon:
+                        icon: "calendar"
+                        theme_icon_color: "Custom"
+                        icon_color_normal: (1, 1, 1, 1)
+                        icon_color_focus: (1, 1, 1, 1)
+
+                    MDTextFieldHintText:
+                        id: hint
+                        text: "DD/MM/YYYY"
+                        text_color_normal: (1, 1, 1, 0.8)
+                        text_color_focus: (1, 1, 1, 1)
+                    
+                    MDTextFieldHelperText:
+                        text: "Masukkan tanggal lahir baru sesuai format!"
+                        mode: "persistent"
+                        theme_text_color: "Custom"
+                        text_color_normal: (1, 1, 1, 0.7)
+                        text_color_focus: (1, 1, 1, 0.7)
+                
+                MDTextField:
+                    id: passw1
+                    password: True
+                    mode: "outlined"
+                    size_hint_x: None
+                    width: "400dp"
+                    pos_hint: {"center_x": .5, "center_y": .335}
+                    theme_text_color: "Custom"
+                    text_color_normal: (1, 1, 1, 1)
+                    text_color_focus: (1, 1, 1, 1)
+                    theme_line_color: "Custom"
+                    line_color_normal: (1, 1, 1, 0.6)
+                    line_color_focus: (1, 1, 1, 1)
+                    on_text: root.clear_error()
+
+                    MDTextFieldTrailingIcon:
+                        icon: "key"
+                        theme_icon_color: "Custom"
+                        icon_color_normal: (1, 1, 1, 1)
+                        icon_color_focus: (1, 1, 1, 1)
+
+                    MDTextFieldHintText:
+                        text: "Masukkan Password Baru (min. 8 karakter)"
+                        text_color_normal: (1, 1, 1, 0.8)
+                        text_color_focus: (1, 1, 1, 1)
+                    
+                    MDTextFieldHelperText:
+                        text: "Pastikan password kuat dan terisi dengan benar!"
+                        mode: "on_error"
+                        theme_text_color: "Custom"
+                        text_color: (0.125, 0.227, 0.290, 1)
+                
+                MDTextField:
+                    id: passw2
+                    password: True
+                    mode: "outlined"
+                    size_hint_x: None
+                    width: "400dp"
+                    pos_hint: {"center_x": .5, "center_y": .215}
+                    theme_text_color: "Custom"
+                    text_color_normal: (1, 1, 1, 1)
+                    text_color_focus: (1, 1, 1, 1)
+                    theme_line_color: "Custom"
+                    line_color_normal: (1, 1, 1, 0.6)
+                    line_color_focus: (1, 1, 1, 1)
+                    on_text: root.clear_error()
+
+                    MDTextFieldTrailingIcon:
+                        icon: "key-outline"
+                        theme_icon_color: "Custom"
+                        icon_color_normal: (1, 1, 1, 1)
+                        icon_color_focus: (1, 1, 1, 1)
+
+                    MDTextFieldHintText:
+                        text: "Ulangi Password"
+                        text_color_normal: (1, 1, 1, 0.8)
+                        text_color_focus: (1, 1, 1, 1)
+                    
+                    MDTextFieldHelperText:
+                        text: "Pastikan password sesuai!"
+                        mode: "on_error"
+                        theme_text_color: "Custom"
+                        text_color: (0.125, 0.227, 0.290, 1)
+                
+                MDCheckbox:
+                    size_hint: None, None
+                    size: "25dp", "25dp"
+                    pos_hint: {"center_x": 0.855, "center_y": .15}
+                    color_active: (1, 1, 1, 1)
+                    color_inactive: (1, 1, 1, 0.7)
+                    on_active: root.show_password()
+
+                MDLabel:
+                    id: password_label
+                    text: "Show password"
+                    theme_text_color: "Custom"
+                    text_color: (1, 1, 1, 0.8)
+                    theme_font_name: "Custom"
+                    font_name: "Poppins-Regular"
+                    theme_font_size: "Custom"
+                    font_size: "15sp"
+                    pos_hint: {"center_x": 0.305, "center_y": .147}
+                    halign: "right"
+                
+                MDLabel:
+                    id: error_label
+                    text: ""
+                    theme_font_name: "Custom"
+                    font_name: "Poppins-Medium"
+                    theme_font_size: "Custom"
+                    font_size: "14.5sp"
+                    pos_hint: {"center_x": .5, "center_y": .11}
+                    theme_text_color: "Custom"
+                    text_color: (1, 0, 0, 1)
+                    halign: "center"
+                    padding: "20sp"
+
+                MDButton:
+                    style: "filled"
+                    pos_hint: {"center_x": .5, "center_y": .06}
+                    theme_bg_color: "Custom"
+                    md_bg_color: (1, 1, 1, 1)
+                    size_hint: None, None
+                    size: 150, 50
+                    theme_width: "Custom"
+                    on_release:
+                        root.validate()
+
+                    MDButtonText:
+                        text: "SIMPAN"
+                        theme_text_color: "Custom"
+                        text_color: (0.125, 0.227, 0.290, 1)
+                        theme_font_name: "Custom"
+                        theme_font_size: "Custom"
+                        font_size: "16sp"
+                        font_name: "Poppins-SemiBold"
+                        halign: "center"
+                        pos_hint: {"center_x": .5, "center_y": .5}

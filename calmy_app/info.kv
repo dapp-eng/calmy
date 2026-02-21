@@ -1,0 +1,86 @@
+<InfoScreen>:
+    name: "info"
+    MDFloatLayout:
+        md_bg_color: 0.125, 0.227, 0.290, 1
+
+        MDCard:
+            size_hint: None, None
+            size: "800dp", "700dp"
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            elevation: 10
+            theme_bg_color: "Custom"
+            md_bg_color: (1, 1, 1, 1)
+            padding: "15dp"
+            orientation: "vertical"
+            focus_color: (1, 1, 1, 0)
+            unfocus_color: (1, 1, 1, 1)
+            
+            RelativeLayout:
+
+                MDButton:
+                    style: "filled"
+                    pos_hint: {"center_x": 0.10, "center_y": 0.95}
+                    theme_bg_color: "Custom"
+                    md_bg_color: (1, 1, 1, 1)
+                    size_hint_x: 1
+                    on_release:
+                        app.go_back()
+
+                    MDButtonIcon:
+                        icon: "chevron-left"
+                        theme_icon_color: "Custom"
+                        icon_color: (0.125, 0.227, 0.290, 1)
+                        theme_font_size: "Custom"
+                        font_size: "27sp"
+
+                    MDButtonText:
+                        text: "BACK"
+                        theme_text_color: "Custom"
+                        theme_font_size: "Custom"
+                        font_size: "23sp"
+                        text_color: (0.125, 0.227, 0.290, 1)
+                        theme_font_name: "Custom"
+                        font_name: "Poppins-Medium"
+                
+                MDIcon:
+                    icon: "information-outline"
+                    pos_hint: {"center_x": .845, "center_y": .95}
+                    theme_icon_color: "Custom"
+                    theme_font_size: "Custom"
+                    font_size: "30sp"
+                    icon_color: (0.125, 0.227, 0.290, 1)
+
+                MDLabel:
+                    text: "Info"
+                    pos_hint: {"center_x": .90, "center_y": .945}
+                    theme_text_color: "Custom"
+                    text_color: (0.125, 0.227, 0.290, 1)
+                    theme_font_name: "Custom"
+                    theme_font_size: "Custom"
+                    font_size: "24sp"
+                    font_name: "Poppins-Medium"
+                    halign: "center"
+
+                Image:
+                    source: app.resource_path("assets/logover.png")
+                    size_hint: .28, .28
+                    pos_hint: {"center_x": .5, "center_y": .76}
+
+                MDScrollView:
+                    size_hint: 1, None
+                    height: "385dp"
+                    pos_hint: {"center_x": .5, "center_y": .33}
+                    MDLabel:
+                        text: "Selamat datang di aplikasi Calmy! Aplikasi ini dirancang untuk membantu user dalam mengontrol kalori harian dengan lebih mudah dan terstruktur. Dengan fitur-fitur yang terdapat dalam aplikasi ini, user dapat mencapai tujuan Anda dengan lebih efektif, berikut merupakan beberapa fitur menarik dari aplikasi Calmy!:\n1. BMI Calculator dimana user dapat mengetahui indeks komposisi tubuhnya yang terbagi atas underweight, normal dan overweight. BMI dihitung berdasarkan berat badan dan tinggi badan.\n2. BMR Calculator untuk menghitung Basal Metabolic Rate (BMR), yaitu jumlah kalori yang dibutuhkan dalam sehari.\n3. Info Program : berisi tentang program-program yang ditawarkan oleh aplikasi calmy, seperti penurunan berat badan, pertahankan berat badan dan peningkatan berat badan.\n4. Daily : Fitur ini seperti jurnal harian untuk mencatat makanan dan minuman yang telah dikonsumsi.\n5. Recap : Meringkas konsumsi kalori dan berat badan user dalam format mingguan. Fitur ini berfungsi untuk memudahkan evaluasi progres user.\n6. Update : User dapat mengupdate berat badan dan tinggi badan secara berkala melalui fitur ini.\nDengan fitur-fitur di atas Calmy hadir sebagai solusi yang praktis dan efektif untuk membantu user dalam mencapai target kesehatan mereka. Kami percaya bahwa langkah kecil yang konsisten dapat membawa perubahan besar. Selamat menggunakan Calmy dan semoga perjalanan kesehatan Anda menjadi lebih menyenangkan!"
+                        pos_hint: {"center_x": .5, "center_y": .5}
+                        theme_text_color: "Custom"
+                        spacing: 5
+                        padding: "30dp"
+                        text_color: (0.125, 0.227, 0.290, 1)
+                        theme_font_name: "Custom"
+                        theme_font_size: "Custom"
+                        font_size: "16sp"
+                        font_name: "Poppins-SemiBold"
+                        halign: "justify"
+                        adaptive_height: True
+        
