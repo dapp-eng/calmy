@@ -37,7 +37,7 @@ The project was born from the belief that maintaining a healthy diet should be s
    ```
 
 
-## Contributors
+## 👥 Contributors
 This project was a collaborative effort by a team of three students at UNESA:
 * **Daffa Ahmad Pangreksa**
 * **Illona Anindya**
