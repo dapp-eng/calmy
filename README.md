@@ -25,11 +25,17 @@ The project was born from the belief that maintaining a healthy diet should be s
 
 3. **Navigate to the directory**:
    ```bash
-   cd calmy
+   cd calmy_app
 
 5. **Run the application**:
    ```bash
-   python main.py
+   python calmy.py
+   ```
+   or
+   ```bash
+   python calmy_fix.py
+   ```
+
 
 ## Contributors
 This project was a collaborative effort by a team of three students at UNESA:
